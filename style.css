@@ -93,6 +93,42 @@ button#loginButton:hover {
     color: white;
 }
 
+footer {
+    background-color: #333;
+    color: #ffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:  20px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #ffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.footer-section a:houver {
+    text-decoration: underline;
+}
+
 main {
     font-size: 20px;
     padding: 20px;
