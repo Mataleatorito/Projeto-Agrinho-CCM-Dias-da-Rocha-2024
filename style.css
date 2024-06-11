@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajusta a distribuição dos itens */
+    height: 125px;
+    background-color: #6d924e;
+    color: #000000;
+    padding: 10px 20px;
+}
+
+button#menuButton {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+button#menuButton:focus {
+    outline: none;
+}
+
+.logo {
+    height: 130px;
+    width: 130px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #5a7c3e;
+    padding-top: 125px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+#navMenu.shown {
+    transform: translateX(0);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #739e4f;
+}
+
+button#loginButton {
+    border: 1px solid #739e4f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: #739e4f;
+    padding: 8px 15px;
+}
+
+button#loginButton:hover {
+    background-color: #739e4f;
+    color: white;
+}
+
+main {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        top: 125px;
+        left: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        width: auto;
+    }
+}
+
+.texto{
+    text-align: center;
+}
+
+.subtitulo{
+    text-align: center;
+}
