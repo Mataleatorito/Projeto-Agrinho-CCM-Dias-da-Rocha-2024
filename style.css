@@ -7,18 +7,32 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: white;
+    transition: background-color 0.3s ease;
+    color: #000000;
 }
+
+
+/* cabeçalho */
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ajusta a distribuição dos itens */
-    height: 125px;
+    justify-content: space-between;
+    /* Ajusta a distribuição dos itens */
+    height: 140px;
     background-color: #6d924e;
     color: #000000;
     padding: 10px 20px;
 }
 
+.logo {
+    margin: 0 auto;
+    height: 130px;
+    width: 130px;
+}
+
+
+/* Estilo original do botão do menu */
 button#menuButton {
     font-size: 24px;
     background: none;
@@ -26,17 +40,25 @@ button#menuButton {
     color: white;
     cursor: pointer;
     margin-right: 20px;
+    transition: transform 0.3s ease;
+    /* Transição suave para a escala */
 }
 
 button#menuButton:focus {
     outline: none;
 }
 
+/* Aumenta o botão do menu quando o mouse passa sobre ele */
+button#menuButton:hover {
+    transform: scale(1.2);
+    /* Aumenta o botão em 20% */
+}
+
 .logo {
+    margin: 0 auto; /* Centraliza horizontalmente a imagem */
     height: 130px;
     width: 130px;
 }
-
 nav {
     position: fixed;
     top: 0;
@@ -49,6 +71,7 @@ nav {
     flex-direction: column;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    z-index: 100;
 }
 
 #navMenu.shown {
@@ -93,41 +116,37 @@ button#loginButton:hover {
     color: white;
 }
 
-footer {
-    background-color: #333;
-    color: #ffff;
-    padding: 20px 0;
+.title-bar {
+    background-color: #6d924e;
+    /* Cor de fundo da faixa */
+    color: white;
+    /* Cor do texto */
     text-align: center;
+    /* Centraliza o texto */
+    border-radius: 15px;
+    /* Adiciona bordas arredondadas */
+    margin: 20px;
+    /* Adiciona margem para evitar que a faixa toque outras seções */
+    padding: 40px 0;
+    /* Espaçamento interno da faixa */
 }
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding:  20px;
+.title-bar h2 {
+    margin: 0;
+    /* Remove margens padrão dos títulos */
 }
 
-.footer-section {
-    flex: 1 1 200px;
-    margin: 10px;
+.title-bar h1 {
+    font-size: 2.5em;
+    /* Tamanho da fonte do h1 */
 }
 
-.footer-section h4 {
-    margin-bottom: 10px;
+.title-bar h2 {
+    font-size: 1.5em;
+    /* Tamanho da fonte do h2 */
 }
 
-.footer-section p, .footer-section a {
-    color: #ffff;
-    text-decoration: none;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.footer-section a:houver {
-    text-decoration: underline;
-}
+/* corpo do site */
 
 main {
     font-size: 20px;
@@ -162,10 +181,150 @@ main {
     }
 }
 
-.texto{
+.contair h1 {
+    text-align: center;
+    font-size: 70px;
+    font-family: "Kanit", sans-serif;
+    ;
+}
+
+.contair h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Kanit", sans-serif;
+}
+
+.contair p {
+    font-size: 26px;
+}
+
+.image-text1 {
+    margin: 10px 100px;
+    overflow: hidden;
+    z-index: 1; /* Garante que a imagem não sobreponha a aba lateral */
+    /* Garante que o container englobe o float */
+}
+
+.image-text1 img {
+    float: left;
+    /* Faz a imagem flutuar à esquerda */
+    margin-right: 40px;
+    /* Espaçamento entre a imagem e o texto */
+    max-width: 1000px;
+    /* Ajuste conforme necessário */
+}
+
+.image-text2 {
+    margin: 10px 100px;
+    overflow: hidden;
+    z-index: 1; /* Garante que a imagem não sobreponha a aba lateral */
+    /* Garante que o container englobe o float */
+}
+
+.image-text2 img {
+    float: right;
+    margin-left: 40px;
+    max-width: 600px;
+}
+
+.image-text2 p {
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.image-text1 p {
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.image-text3 {
+    overflow: hidden;
+    margin: 10px 100px;
+    z-index: 1; /* Garante que a imagem não sobreponha a aba lateral */
+}
+
+.image-text3 img {
+    float: left;
+    margin-right: 40px;
+    max-width: 870px;
+}
+
+.image-text3 p {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.title-image {
+    border-radius: 15px;
+    object-fit: cover;
+    /* Cobre a área do container mantendo a proporção */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave ao transformar */
+}
+
+.title-image:hover {
+    transform: scale(1.1);
+    /* Aumenta a escala da imagem em 10% ao passar o mouse */
+}
+
+.grow-on-hover {
+    display: inline-block;
+    /* Garante que o transform funcione corretamente */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave ao transformar */
+    text-decoration: none;
+}
+
+.grow-on-hover:hover {
+    transform: scale(1.1);
+    /* Aumenta a escala do link em 10% ao passar o mouse */
+}
+
+.contair1 {
+    font-size: 26px;
+    margin: 1px 100px;
+}
+
+.contair1 h1 {
+    font-size: 70px;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+}
+
+/* rodapé */
+
+footer {
+    background-color: #333;
+    color: #ffff;
+    padding: 20px 0;
     text-align: center;
 }
 
-.subtitulo{
-    text-align: center;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.footer-section a:houver {
+    text-decoration: underline;
 }

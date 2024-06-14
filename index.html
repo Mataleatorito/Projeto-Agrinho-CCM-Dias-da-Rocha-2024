@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres para o documento -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
-    <title>EcoDias - Do Campo a Cidade</title> <!-- Título da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a visualização para dispositivos móveis -->
+    <title>EcoDias - Do Campo à Cidade</title> <!-- Título da página -->
     <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"> <!-- Link para a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <!-- Link para a fonte Montserrat do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <button id="menuButton" aria-expanded="false">☰</button> <!-- Botão para abrir o menu lateral -->
-        <a href="index.html"><img src="./Imagens/Eco_Dias-removebg-preview.png" alt="Logo do EcoDias" class="logo"></a> <!-- Logo do site -->
-        <nav id="navMenu" class="hidden"> <!-- Menu de navegação que é inicialmente escondido -->
-            <ul>
-                <li><a href="index.html">Inicio</a></li><!-- Link para a página inicial -->
-                <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
-                <li><a href="Hortas.html">Hortas</a></li> <!-- Link para a página Aba 2 -->
-                <li><a href="praticasecologicas.html">Práticas Ecológicas</a></li> <!-- Link para a página Aba 3 -->
-                <li><a href="agrotec.html">Agrotech</a></li> <!-- Link para a página Aba 4 -->
-                <li><a href="equipe.html">Equipe</a></li>
-            </ul>
-        </nav>
-        <button id="loginButton">Login</button> <!-- Botão de login -->
+            <button id="menuButton" aria-expanded="false">☰</button> <!-- Botão para abrir o menu lateral -->
+            <a href="index.html"><img src="./Imagens/Eco_Dias-removebg-preview.png" alt="Logo do EcoDias"
+                    class="logo"></a> <!-- Logo do site -->
+            <nav id="navMenu" class="hidden"> <!-- Menu de navegação que é inicialmente escondido -->
+                <ul>
+                    <li><a href="index.html">Inicio</a></li><!-- Link para a página inicial -->
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
+                    <li><a href="Hortas.html">Hortas</a></li> <!-- Link para a página Aba 2 -->
+                    <li><a href="praticasecologicas.html">Práticas Ecológicas</a></li> <!-- Link para a página Aba 3 -->
+                    <li><a href="agrotec.html">Agrotech</a></li> <!-- Link para a página Aba 4 -->
+                    <li><a href="equipe.html">Equipe</a></li>
+                </ul>
+            </nav>
+            <button id="loginButton">Registrar</button>
     </header>
     <main>
-        <h1 class="titulo">EcoDias</h1> <!-- Título principal da página -->
+        <div class="title-bar">
+            <h1>EcoDias</h1> <!-- Título principal da página -->
+            <h2>Conexão do Campo á Cidade</h2>
+        </div>
         <br>
-        <h3 class="subtitulo">Seja muito Bem-Vindo ao EcoDias.</h3>
+        <div class="image-text1">
+            <img src="./Imagens/template.png" alt="template1" class="title-image">
+            <p>Somos um projeto criado para o <a href="https://www.sistemafaep.org.br/agrinho/"
+                    class="grow-on-hover">Agrinho 2024</a>, onde trazemos a proposta de uma conexão entre o campo e a
+                cidade a partir de práticas ecológicas, por meio da tecnologia. Nosso objetivo é mostrar que é possível
+                viver de maneira sustentável e consciente, mesmo em ambientes urbanos. </p>
+            <br>
+            <p>Este projeto foi idealizado e construído por alunos do Colégio Cívico Militar Dias da Rocha, em
+                Araucária, PR. <a href="equipe.html" class="grow-on-hover">Conheça nossa Equipe</a> e descubra como
+                estamos trabalhando juntos para promover um futuro mais verde e tecnológico.</p>
+
+        </div>
         <br>
-        <p>Somos um projeto criado para o <a href="https://www.sistemafaep.org.br/agrinho/">Agrinho</a> 2024, onde trazemos a proposta de uma conexão entre o campo e a cidade a partir de práticas ecológicas, por meio da tecnologia. </p>
-        <br>  
-        <p>Este projeto foi idealizado e construído por alunos do Colégio Cívico Militar Dias da Rocha, Araucária, PR. <a href="equipe.html">Conheça nossa Equipe</a>.</p> 
-        <br>  
-        <p>Neste site você encontra como fazer <a href="Hortas.html">Hortas</a> em casa, <a href="praticasecologicas.html">Práticas Ecológicas</a> e a integração da tecnologia em hortas ( <a href="agrotec.html">Agrotech</a> ).</p>
+        <div class="image-text2">
+            <img src="./Imagens/template3.png" alt="template2" class="title-image">
+            <br>
+            <p>Neste site, você encontrará diversas informações e guias práticos para transformar seu espaço urbano em
+                um ambiente verde e produtivo. Saiba como fazer <a href="Hortas.html" class="grow-on-hover">Hortas</a>
+                em casa, adotar <a href="praticasecologicas.html" class="grow-on-hover">Práticas Ecológicas</a> no seu
+                dia a dia, e integrar a tecnologia nas suas hortas com técnicas inovadoras de <a href="agrotec.html"
+                    class="grow-on-hover">Agrotech</a>.</p>
+            <br>
+            <p>Navegue pelo nosso conteúdo e inspire-se a fazer parte dessa mudança. Juntos, podemos construir uma ponte
+                entre o campo e a cidade, promovendo a sustentabilidade e a inovação.</p>
+        </div>
+        </div>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
