@@ -26,10 +26,12 @@ header {
 }
 
 .logo {
+    text-align: center;
     margin: 0 auto;
     height: 130px;
     width: 130px;
 }
+
 
 
 /* Estilo original do botão do menu */
@@ -54,11 +56,6 @@ button#menuButton:hover {
     /* Aumenta o botão em 20% */
 }
 
-.logo {
-    margin: 0 auto; /* Centraliza horizontalmente a imagem */
-    height: 130px;
-    width: 130px;
-}
 nav {
     position: fixed;
     top: 0;
@@ -99,21 +96,6 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #739e4f;
-}
-
-button#loginButton {
-    border: 1px solid #739e4f;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    background-color: white;
-    color: #739e4f;
-    padding: 8px 15px;
-}
-
-button#loginButton:hover {
-    background-color: #739e4f;
-    color: white;
 }
 
 .title-bar {
@@ -291,7 +273,227 @@ main {
     font-family: "Kanit", sans-serif;
 }
 
-/* rodapé */
+.equipe {
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.team-member {
+    flex: 1 1 45%;
+    /* Permite que cada membro ocupe cerca de 45% do container */
+    margin: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 300px;
+    /* Define o tamanho máximo das imagens */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    font-size: 1em;
+}
+
+.team-member.single {
+    flex: 1 1 90%;
+    /* Permite que o último membro ocupe cerca de 90% do container */
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 100%;
+    }
+
+    .team-member.single {
+        flex: 1 1 100%;
+    }
+}
+
+.team-text {
+    text-align: center;
+    font-size: 26px;
+}
+
+.intro {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.products {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    margin-top: 10px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.product-price {
+    color: #007bff; /* Azul para destacar o preço */
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.1);
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #6d924e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product button:hover {
+    transform: scale(1.1);
+}
+
+.cart {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.cart h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.cart button {
+    padding: 10px 20px;
+    background-color: #6d924e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart button:hover {
+    transform: scale(1.1);
+}
+
+/* Botão de adicionar ao carrinho */
+.add-to-cart {
+    background-color: #6d924e; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Aparece a mãozinha no cursor */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.add-to-cart:hover {
+    background-color: #58793b; /* Cor de fundo ao passar o mouse */
+}
+
+/* Botão de remover item */
+.remove-from-cart {
+    background: none; /* Remove a cor de fundo */
+    border: none; /* Remove a borda */
+    color: #ff0000; /* Cor vermelha */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Aparece a mãozinha no cursor */
+    margin-left: 10px; /* Espaçamento à esquerda */
+}
+
+.remove-from-cart:hover {
+    color: #cc0000; /* Tom mais escuro de vermelho ao passar o mouse */
+}
+
+.certifications {
+    padding: 20px;
+}
 
 footer {
     background-color: #333;
@@ -327,4 +529,15 @@ footer {
 
 .footer-section a:houver {
     text-decoration: underline;
+}
+
+.ecoloja-text {
+   font-size: 26px;
+   text-align: center;
+}
+
+hr {
+    border: none; /* Remove a borda padrão */
+    border-top: 1px solid #ccc; /* Adiciona uma linha com 1 pixel de largura e cor cinza claro */
+    margin: 20px 0; /* Margem acima e abaixo da linha */
 }

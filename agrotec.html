@@ -22,35 +22,87 @@
                 <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
                 <li><a href="Hortas.html">Hortas</a></li> <!-- Link para a página Aba 2 -->
                 <li><a href="praticasecologicas.html">Práticas Ecológicas</a></li> <!-- Link para a página Aba 3 -->
-                <li><a href="agrotec.html">Agrotech</a></li> <!-- Link para a página Aba 4 -->
+                <li><a href="agrotec.html">EcoLoja</a></li> <!-- Link para a página Aba 4 -->
                 <li><a href="equipe.html">Equipe</a></li>
             </ul>
         </nav>
-        <button id="loginButton">Login</button> <!-- Botão de login -->
+        
     </header>
+    <div class="title-bar">
+        <h1>EcoLoja</h1>
+        <h2>Produtos frescos diretamente do campo</h2>
+    </div>
+    
     <main>
-        <div class="contair">
-            <p>Afinal de contas o que é a Ecoloja?</p>
+        <section class="ecoloja-text">
+            <p> A Ecoloja, concebida pela nossa equipe, é uma loja virtual inovadora onde os produtos são adquiridos diretamente do campo, eliminando processos demorados que frequentemente resultam em produtos chegando ao consumidor em condições de amadurecimento excessivo, quase podres.</p>
+                <p> Nossos vendedores possuem certificação sanitária, assegurando a qualidade dos produtos oriundos de seu árduo trabalho na lavoura. Importante ressaltar que, devido ao caráter do Concurso Agrinho, voltado para projetos na rede pública de ensino, as vendas na Ecoloja não são efetivamente realizadas neste momento. </p>
+                    <p>  No entanto, isso não impede que o site seja oficialmente lançado posteriormente, possibilitando que tanto as vendas quanto o funcionamento completo do site sejam integralmente explorados.</p>
+        </section>
+        <section class="produtos">
+            <br>
+            <h2>Produtos Disponíveis</h2>
+            <hr>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="./Imagens/abacate.jpg" alt="Produto 1">
+                    <div class="product-description">
+                        <p class="product-name">Produto 1</p>
+                        <p class="product-price">R$ 10.00</p>
+                    </div>
+                    <button class="add-to-cart" data-product="Produto 1" data-price="10.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-item">
+                    <img src="./Imagens/abacate.jpg" alt="Produto 2">
+                    <div class="product-description">
+                        <p class="product-name">Produto 2</p>
+                        <p class="product-price">R$ 15.00</p>
+                    </div>
+                    <button class="add-to-cart" data-product="Produto 2" data-price="15.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-item">
+                    <img src="./Imagens/abacate.jpg" alt="Produto 3">
+                    <div class="product-description">
+                        <p class="product-name">Produto 3</p>
+                        <p class="product-price">R$ 20.00</p>
+                    </div>
+                    <button class="add-to-cart" data-product="Produto 3" data-price="20.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-item">
+                    <img src="./Imagens/abacate.jpg" alt="Produto 4">
+                    <div class="product-description">
+                        <p class="product-name">Produto 4</p>
+                        <p class="product-price">R$ 25.00</p>
+                    </div>
+                    <button class="add-to-cart" data-product="Produto 4" data-price="25.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-item">
+                    <img src="./Imagens/abacate.jpg" alt="Produto 5">
+                    <div class="product-description">
+                        <p class="product-name">Produto 5</p>
+                        <p class="product-price">R$ 30.00</p>
+                    </div>
+                    <button class="add-to-cart" data-product="Produto 5" data-price="30.00">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
 
+        <section class="cart">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items"></ul>
+            <div id="total-value">Valor Total: R$ 0.00</div>
+            <button id="checkout">Finalizar Compra</button>
+        </section>
+    
+        <section class="certifications">
+            <h2>Certificações</h2>
+            <p>Nossos vendedores possuem certificações sanitárias emitidas por órgãos reguladores reconhecidos, garantindo que os produtos comercializados na Ecoloja atendem aos mais altos padrões de higiene e segurança alimentar.</p>
 
-            A ideia da Ecoloja vinda de nossa equipe, consiste basicamente em uma loja virtual onde os produtos são
-            comprados diretamente do campo em vez de ter aquele processo, que por muitas vezes é muito demorado e pode
-            levar o produto a chegar em condições de amadurecimento excessivo (quase podridão do produto).
-
-
-
-            Nossos vendedores tem certificação sanitária para vender os resultados de sua produção e árduo trabalho na
-            lavoura, o que garante uma boa qualidade do que é comprado por aqui.
-
-
-            Como o Concurso Agrinho se trata de projetos da rede de ensino pública, as vendas da EcoLoja não são
-            realmente feitas, pois esse site se trata de um projeto para um concurso e não necessariamente de um projeto
-            para ser funcional neste momento. Mas isso não impede de em algum momento o site ser publicado oficialmente
-            para que as vendas e o site sejam utilizados de maneira completa.
-
-        </div>
+        </section>
     </main>
+    
     <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 
 </html>
+

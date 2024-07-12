@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="payment.css">
+    <style>
+        /* Estilos adicionais podem ser colocados aqui, se necessário */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Imagens/Eco_Dias-removebg-preview.png" alt="Logo da Ecoloja">
+        </div>
+    </header>
+    <main>
+        <h1>Pagamento</h1>
+        <div id="total-value"></div>
+        
+        <form id="paymentForm" action="processar_pagamento.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@favorito.com" required>
+            
+            <label for="cardNumber">Número do Cartão:</label>
+            <input type="text" id="creditCardNumber" maxlength="19" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required>
+            
+            <label for="expiryDate">Data de Validade:</label>
+            <input type="text" id="expiryDate" maxlength="5" name="expiryDate" placeholder="MM/AA" required>
+        
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="3" name="cvv" placeholder="XXX" required>
+           
+            <button type="submit" id="pagar-cartao">Pagar com Cartão</button>
+        </form>
+
+        <br>
+
+        <button class="pix-button" onclick="abrirModalPIX()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-1h1zm1 0h-1v-1h1zm1-2H8v-1h5c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1H8V7h5c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2z"/>
+            </svg>
+            Pagar via PIX
+        </button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ecoloja. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal de PIX -->
+    <div id="modalPIX" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalPIX()">&times;</span>
+            <h2>QR Code PIX</h2>
+            <img src="./Imagens/QRCODE2.jpg" alt="QR Code PIX">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const creditCardInput = document.getElementById('creditCardNumber');
+            const expiryDateInput = document.getElementById('expiryDate');
+            const cvvInput = document.getElementById('cvv');
+            const paymentForm = document.getElementById('paymentForm');
+        
+            // Formatação do número do cartão de crédito
+            creditCardInput.addEventListener('input', function() {
+                let trimmedValue = creditCardInput.value.replace(/\s/g, '').replace(/\D/g, '');
+                let formattedValue = '';
+        
+                for (let i = 0; i < trimmedValue.length; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        formattedValue += ' ';
+                    }
+                    formattedValue += trimmedValue[i];
+                }
+        
+                creditCardInput.value = formattedValue.trim();
+            });
+        
+            // Formatação da data de validade do cartão
+            expiryDateInput.addEventListener('input', function() {
+                let trimmedValue = expiryDateInput.value.replace(/\//g, '').replace(/\D/g, '');
+                let formattedValue = '';
+        
+                if (trimmedValue.length > 2) {
+                    let month = trimmedValue.slice(0, 2);
+                    let year = trimmedValue.slice(2, 4);
+        
+                    month = parseInt(month);
+                    year = parseInt(year);
+        
+                    if (month < 1 || month > 12) {
+                        formattedValue = trimmedValue.slice(0, 2);
+                    } else {
+                        formattedValue = month + '/' + year;
+                    }
+                } else if (trimmedValue.length <= 2) {
+                    formattedValue = trimmedValue.slice(0, 2);
+                }
+        
+                expiryDateInput.value = formattedValue.slice(0, 5);
+            });
+        
+            // Validação do CVV do cartão (permitindo apenas números e até 3 dígitos)
+            cvvInput.addEventListener('input', function() {
+                let trimmedValue = cvvInput.value.replace(/\D/g, '');
+                cvvInput.value = trimmedValue.slice(0, 3);
+            });
+        
+            // Ação ao enviar o formulário de pagamento
+            paymentForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+                
+                // Aqui você pode adicionar mais validações se necessário
+                
+                // Simulação de pagamento
+                alert('A simulação de pagamento foi concluída. Agradecemos pela experiência!');
+                
+                // Redirecionamento para a página principal da Ecoloja após o alerta
+                window.location.href = 'agrotec.html'; // Substitua pelo caminho correto
+            });
+        });
+    </script>
+</body>
+</html>
