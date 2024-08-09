@@ -145,9 +145,13 @@ main {
         justify-content: space-between;
     }
 
+    .no-scroll {
+        overflow: hidden;
+    }    
+
     nav {
         width: 100%;
-        height: auto;
+        height: 100%;
         top: 125px;
         left: 0;
         flex-direction: row;
