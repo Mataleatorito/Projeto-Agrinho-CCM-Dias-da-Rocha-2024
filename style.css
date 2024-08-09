@@ -304,8 +304,11 @@ main {
 }
 
 .team-text {
-    text-align: center;
+    padding: 5px;
+    text-align: justify;
     font-size: 26px;
+    hyphens: auto;
+    word-break: break;
 }
 
 .intro {
@@ -509,7 +512,8 @@ footer {
 
 .ecoloja-text {
    font-size: 26px;
-   text-align: center;
+   text-align: justify;
+
 }
 
 hr {
@@ -587,5 +591,14 @@ hr {
     .contair1 {
         font-size: 26px;
         margin: 10px;
+    }
+
+    .ecoloja-text {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .produtos {
+        padding: 10px;
     }
 }
