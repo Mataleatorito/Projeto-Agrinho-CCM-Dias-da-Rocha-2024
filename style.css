@@ -574,6 +574,7 @@ hr {
 
     .title-bar {
         padding: 20px!important;
+        margin: 5px;
     }
 
     .product-item img, .team-member img {
@@ -596,6 +597,10 @@ hr {
     .ecoloja-text {
         padding: 10px;
         text-align: center;
+
+        text-align: justify;
+        hyphens: auto;
+        word-break: break;
     }
 
     .produtos {

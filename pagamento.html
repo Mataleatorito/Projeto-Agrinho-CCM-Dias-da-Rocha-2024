@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
     <link rel="stylesheet" href="payment.css">
-    <style>
-        /* Estilos adicionais podem ser colocados aqui, se necessário */
-    </style>
 </head>
 <body>
     <header>
@@ -113,17 +110,13 @@
                 cvvInput.value = trimmedValue.slice(0, 3);
             });
         
-            // Ação ao enviar o formulário de pagamento
             paymentForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Impede o envio padrão do formulário
+                event.preventDefault();
                 
-                // Aqui você pode adicionar mais validações se necessário
-                
-                // Simulação de pagamento
+
                 alert('A simulação de pagamento foi concluída. Agradecemos pela experiência!');
                 
-                // Redirecionamento para a página principal da Ecoloja após o alerta
-                window.location.href = 'agrotec.html'; // Substitua pelo caminho correto
+                window.location.href = 'agrotec.html';
             });
         });
     </script>
